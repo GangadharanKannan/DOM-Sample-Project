@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light the Bulb</title>
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body bgcolor="black">
+    <div class="2xl:container mx-auto py-5">
+        <div class="w-[90%] mx-auto grid grid-cols-1">
+            <div class="flex flex-col justify-center items-center space-y-5">
+                <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" alt="bulb-image" id="bulb" class="h-52">
+                <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt="cat-img" id="cat" class="h-52">
+                <h1 id="h1" class="text-2xl text-white">Switch On</h1>
+                <div>
+                    <button id="onBtn" class="border-[1px] bg-orange-600 px-5 py-2">On</button>
+                    <button id="offBtn" class="border-[1px] bg-orange-600 px-5 py-2">Off</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let bulb = document.getElementById("bulb");
+        let cat = document.getElementById("cat");
+        let hText = document.getElementById("h1");
+        let onBtn = document.getElementById("onBtn");
+        let offBtn = document.getElementById("offBtn");
+
+        onBtn.addEventListener("click",()=>{
+            hText.textContent = "Switch On";
+            bulb.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png";
+            cat.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png"
+        })
+
+        offBtn.addEventListener("click",()=>{
+            hText.textContent = "Switch Off";
+            bulb.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png";
+            cat.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png"
+        });
+
+    </script>
+</body>
+</html>

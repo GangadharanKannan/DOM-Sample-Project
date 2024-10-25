@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple Calc</title>
+
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="2xl:container mx-auto py-5">
+        <div class="w-[90%] mx-auto grid grid-cols-1">
+            <div class="flex flex-col justify-center items-center gap-5">
+                <input type="number" id="num1" class="border-[5px]" value="0">
+                <input type="number" id="num2" class="border-[5px]" value="0">
+                <div>
+                    <button id="add" class="border px-3 py-2 bg-orange-300 text-white">Addition</button>
+                    <button id="sub" class="border px-3 py-2 bg-orange-300 text-white">Subtract</button>
+                    <button id="mul" class="border px-3 py-2 bg-orange-300 text-white">Multiply</button>
+                    <button id="div" class="border px-3 py-2 bg-orange-300 text-white">Divide</button>
+                </div>
+                <h2 id="out" class="text-[25px]">Answer</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var num1 = document.getElementById("num1");
+        var num2 = document.getElementById("num2");
+
+        var add = document.getElementById("add");
+        var sub = document.getElementById("sub");
+        var mul = document.getElementById("mul");
+        var div = document.getElementById("div");
+
+        var out = document.getElementById("out");
+
+        add.addEventListener("click",()=>{
+            let addition = parseInt(num1.value) + parseInt(num2.value);
+            out.textContent =`Answer ${addition}`;
+        });
+        sub.addEventListener("click",()=>{
+            let subtraction = parseInt(num1.value) - parseInt(num2.value);
+            out.textContent =`Answer ${subtraction}`;
+        });
+        mul.addEventListener("click",()=>{
+            let multiply = parseInt(num1.value) * parseInt(num2.value);
+            out.textContent =`Answer ${multiply}`
+        });
+        div.addEventListener("click",()=>{
+            let divison = parseInt(num1.value) / parseInt(num2.value);
+            out.textContent =`Answer ${divison}`
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Project</title>
+
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="2xl:container mx-auto py-16">
+        <div class="w-[90%] mx-auto grid grid-cols-1">
+            <div class="flex flex-col justify-center items-center gap-5">
+                <h2 class="text-[50px]">Counter</h2>
+                <h1 id="count" class="text-[50px] leading-3 pb-5">0</h1>
+                <div>
+                    <button id="dec" class="border px-3 py-2 bg-orange-500 text-white">Decrement</button>
+                    <button id="reset" class=" order px-3 py-2 bg-orange-500 text-white">Reset</button>
+                    <button id="inc" class="border px-3 py-2 bg-orange-500 text-white">Increment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var counter = document.getElementById("count");
+        var decBtn = document.getElementById("dec");
+        var resBtn = document.getElementById("reset");
+        var incBtn = document.getElementById("inc");
+
+        decBtn.addEventListener("click", ()=>{
+            counter.textContent = parseInt(counter.textContent) - 1;
+            counter.style.color = "red";
+        });
+
+        resBtn.addEventListener("click", ()=>{
+            counter.textContent = 0;
+            counter.style.color = "black";
+        })
+
+        incBtn.addEventListener("click", ()=>{
+            counter.textContent = parseInt(counter.textContent) + 1;
+            counter.style.color = "green";
+        })
+
+    </script>
+</body>
+</html>
